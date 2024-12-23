@@ -40,7 +40,7 @@ const StudentsPage = () => {
     };
 
     fetchDropdownData();
-  }, []);
+  }, []); 
 
   // Fetch students based on selected filters
   useEffect(() => {
