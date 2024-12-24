@@ -1,6 +1,3 @@
-
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
 import { useEffect, useState } from "react";
 import supabase from "../superbase_client";
 import Dropdown from "../components/Dropdown";
@@ -50,7 +47,7 @@ const StudentsPage = () => {
         let query = supabase.from("students").select("*");
 
         if (selectedYear) {
-          query = query.eq("cohort", selectedYear); // Exact match for cohort
+          query = query.eq("cohort", selectedYear);
         }
         if (selectedCourse) {
           query = query.ilike("courses", `%${selectedCourse}%`); // Partial match for courses

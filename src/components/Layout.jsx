@@ -1,6 +1,5 @@
-// In components/Layout.js
 import React from 'react';
-import Sidebar from './Sidebar'; // Assuming Sidebar is in the components folder
+import Sidebar from './Sidebar';
 import { Link } from 'react-router-dom';
 import Topbar from './Topbar';
 

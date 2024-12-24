@@ -45,6 +45,7 @@ function Topbar({ onSearch }) {
     setIsMessageOpen(false);
     setIsNotificationOpen(false);
     setShowSearchResults(false);
+    setSearchTerm("");
   };
 
   const handleIconClick = (e) => {
@@ -86,7 +87,7 @@ function Topbar({ onSearch }) {
               e.stopPropagation();
               handleSearch();
             }}
-            className="absolute right-4 px-5 py-1 bg-[#3F526E] text-white rounded-md hover:bg-[rgba(63,82,110,0.8)]"
+            className="absolute right-2 px-5 py-1 bg-[#3F526E] text-white rounded-md hover:bg-[rgba(63,82,110,0.8)]"
           >
             Search
           </button>
@@ -150,7 +151,7 @@ function Topbar({ onSearch }) {
           className="absolute top-24 left-1/2 transform -translate-x-1/2 bg-white rounded-lg shadow-lg p-4 w-[60%] max-w-sm z-50"
           onClick={(e) => handleIconClick(e)}
         >
-          <h3 className="text-lg font-bold mb-4">Search Results</h3>
+          <h3 className="text-lg font-bold mb-4">Courses</h3>
           {searchResults.length > 0 ? (
             searchResults.map((course) => (
               <div
